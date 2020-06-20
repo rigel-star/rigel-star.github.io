@@ -5,6 +5,28 @@
 
 
 <style>
+
+	.card {
+	  /* Add shadows to create the "card" effect */
+	  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	  max-width: 300px;
+	  margin: auto;
+	  text-align: center;
+	}
+
+	/* On mouse-over, add a deeper shadow */
+	.card:hover {
+	  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	}
+
+	.title {
+	  color: grey;
+	  font-size: 18px;
+	}
+
+	img {
+	  border-radius: 5px 5px 0 0;
+	}
 	
 	#git_link {
 		
@@ -32,23 +54,31 @@
 
 <body>
 
+	<!--Profile card-->
+	<div class="card">
+	  <img src="pp.png" alt="Avatar" style="width: 100%">
+	  <h1>Rigel Star</h1>
+
+	  <p class="title">A creator, A partner, A learner, A student</p>
+	  <p>Patan Multiple Campus</p>
+	</div>
+
 	<h1>Hi, Note: I don't do front end.<h1>
 	<h2>My GitHub profile link</h2>
 	<button id="git_link"><a href="https://www.github.com/rigel-star">GitHub</a></button>
 	
 	<br><br>
+
 	<p>
 	<div id="info">
-	
-	<h2>About Me</h2><br>
-	<h3>This is me Rigel Star and if you like to know <a href="https://en.wikipedia.org/wiki/Rigel"> Rigel </a>is 7th brightest star in the night sky. I love to do research. You can find many repos in my github profile like image processing 
-	algorithms, project euler solutions, graphics programming and my projects like image editors and computer 
-	vision libraries. I'm begineer in CV and CG field so stay tuned and lets work together.
-	</h3>
+		<h2>About Me</h2><br>
+		<h3>This is me Rigel Star and if you like to know <a href="https://en.wikipedia.org/wiki/Rigel"> Rigel </a>is 7th brightest star in the night sky. I love to do research. You can find many repos in my github profile like image processing 
+		algorithms, project euler solutions, graphics programming and my projects like image editors and computer 
+		vision libraries. I'm begineer in CV and CG field so stay tuned and lets work together.
+		</h3>
 	</div>
 	</p>
 
-	<button><a href="profile.html">My Profile</a></button>
 	<button><a href="projects.html">My Projects</a></button>
 
 </body>
