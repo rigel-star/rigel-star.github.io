@@ -8,7 +8,7 @@
 
 	.card {
 	  /* Add shadows to create the "card" effect */
-	  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 	  max-width: 300px;
 	  margin: auto;
 	  text-align: center;
@@ -16,7 +16,7 @@
 
 	/* On mouse-over, add a deeper shadow */
 	.card:hover {
-	  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	  box-shadow: 0 16px 24px 0 rgba(0,0,0,0.2);
 	}
 
 	.title {
@@ -27,25 +27,46 @@
 	img {
 	  border-radius: 5px 5px 0 0;
 	}
+
+	a {
+		font-size: 20px;
+		color: white;
+	}
 	
 	#git_link {
-		
 		color: white;
 		background-color: black;
 		text-align: center;
-		size: 300px;
+		font-size: 20px;
 		border-bottom-color: white;
-	
+	}
+
+	#git_link:hover {
+		color: white;
+		background-color: black;
+		text-align: center;
+		font-size: 22px;
+		border-bottom-color: white;
 	}
 	
 	#info {
-	
 		background-color: skyblue;
 		color: black;
 		text-size: 25px;
 		text-align: center;
-		
-	
+	}
+
+	#rigel_wiki {
+		color: blue;
+		font-size: 20px;
+	}
+
+	#project_link {
+		color: white;
+		background-color: black;
+		text-align: center;
+		font-size: 20px;
+		border-bottom-color: white;
 	}
 
 </style>
@@ -66,20 +87,19 @@
 	<h1>Hi, Note: I don't do front end.<h1>
 	<h2>My GitHub profile link</h2>
 	<button id="git_link"><a href="https://www.github.com/rigel-star">GitHub</a></button>
-	
+	<button id="project_link"><a href="projects.html">My Projects</a></button>
+
 	<br><br>
 
 	<p>
 	<div id="info">
-		<h2>About Me</h2><br>
-		<h3>This is me Rigel Star and if you like to know <a href="https://en.wikipedia.org/wiki/Rigel"> Rigel </a>is 7th brightest star in the night sky. I love to do research. You can find many repos in my github profile like image processing 
+		<h2>About Me</h2>
+		<h3>This is me Rigel Star and if you like to know <a id="rigel_wiki" href="https://en.wikipedia.org/wiki/Rigel"> Rigel </a>is 7th brightest star in the night sky. I love to do research. You can find many repos in my github profile like image processing 
 		algorithms, project euler solutions, graphics programming and my projects like image editors and computer 
 		vision libraries. I'm begineer in CV and CG field so stay tuned and lets work together.
 		</h3>
 	</div>
 	</p>
-
-	<button><a href="projects.html">My Projects</a></button>
 
 </body>
 
