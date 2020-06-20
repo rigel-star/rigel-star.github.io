@@ -8,7 +8,7 @@
 
 	.card {
 	  /* Add shadows to create the "card" effect */
-	  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+	  box-shadow: 0 8px 16px 0 rgba(0, 150, 0, 0.5);
 	  max-width: 300px;
 	  margin: auto;
 	  text-align: center;
@@ -16,12 +16,26 @@
 
 	/* On mouse-over, add a deeper shadow */
 	.card:hover {
-	  box-shadow: 0 16px 24px 0 rgba(0,0,0,0.2);
+	  box-shadow: 0 16px 24px 0 rgba(0, 200, 0, 0.5);
 	}
 
 	.title {
 	  color: grey;
 	  font-size: 18px;
+	  font-style: italic;
+	}
+
+	.clz {
+		color: black;
+		font-size: 16px;
+		font-style: bold;
+		font-family: sans-serif;
+	}
+
+	.name {
+		background-color: lightgreen;
+		font-family: sans-serif;;
+		color: black;
 	}
 
 	img {
@@ -78,10 +92,10 @@
 	<!--Profile card-->
 	<div class="card">
 	  <img src="pp.png" alt="Avatar" style="width: 100%">
-	  <h1>Rigel Star</h1>
+	  <h1 class="name">Rigel Star</h1>
 
-	  <p class="title">A creator, A partner, A learner, A student</p>
-	  <p>Patan Multiple Campus</p>
+	  <p class="title">A creator. A partner. A learner. A student</p>
+	  <p class="clz">Patan Multiple Campus</p>
 	</div>
 
 	<h1>Hi, Note: I don't do front end.<h1>
