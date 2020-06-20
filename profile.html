@@ -7,9 +7,10 @@
 
 		.card {
 		  /* Add shadows to create the "card" effect */
-		  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-		  transition: 0.3s;
-		  border-radius: 5px;
+		  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+		  max-width: 300px;
+		  margin: auto;
+		  text-align: center;
 		}
 
 		/* On mouse-over, add a deeper shadow */
@@ -17,9 +18,9 @@
 		  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 		}
 
-		/* Add some padding inside the card container */
-		.container {
-		  padding: 2px 16px;
+		.title {
+		  color: grey;
+		  font-size: 18px;
 		}
 
 		img {
@@ -32,12 +33,12 @@
 <body>
 
 
-	<div class="card">
-  <img src="pp.png" alt="Avatar" style="width:100%">
-  <div class="container">
-    <h4><b>Rigel Star</b></h4>
-    <p>Dreamer</p>
-  </div>
+<div class="card">
+  <img src="pp.png" alt="Avatar" style="width: 100%">
+  <h1>Rigel Star</h1>
+
+  <p class="title">A creator, A partner, A learner, A student</p>
+  <p>Patan Multiple Campus</p>
 </div>
 
 </body>
