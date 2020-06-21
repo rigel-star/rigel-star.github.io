@@ -1,120 +1,95 @@
+<!DOCTYPE html>
 <html>
-
 <head>
-<title>Home</title>
+	<title>I'm RigelStar</title>
 
+	<style type="text/css">
+		
+		#main_div {
+			align-items: center;
+		}
 
-<style>
+		#desc {
+			text-align: center;
+			font-family: italic;
+		}
 
-	.card {
-	  /* Add shadows to create the "card" effect */
-	  box-shadow: 0 8px 16px 0 rgba(0, 150, 0, 0.5);
-	  max-width: 300px;
-	  margin: auto;
-	  text-align: center;
-	}
+		h1 {
+			font-family: monospace;
+			text-align: center;
+			font-size: 40px;
+		}
 
-	/* On mouse-over, add a deeper shadow */
-	.card:hover {
-	  box-shadow: 0 16px 24px 0 rgba(0, 200, 0, 0.5);
-	}
+		h3 {
+			font-family: sans-serif;
+			text-align: center;
+			color: lightgreen;
+		}
 
-	.title {
-	  color: grey;
-	  font-size: 18px;
-	  font-style: italic;
-	}
+		h4 {
+			font-family: monospace;
+			text-align: center;
+			color: gray;
+			font-size: 16px;
+		}
 
-	.clz {
-		color: black;
-		font-size: 16px;
-		font-style: bold;
-		font-family: sans-serif;
-	}
+		button {
+			font-size: 18px;
+			font-family: sans-serif;
+			padding: 5px 5px 5px 5px;
+			max-height: 50px;
+			max-width: 100px;
+		}
 
-	.name {
-		background-color: lightgreen;
-		font-family: sans-serif;;
-		color: black;
-	}
+		a {
+			text-decoration: none;
+		}
 
-	img {
-	  border-radius: 5px 5px 0 0;
-	}
+		#git_desc {
+			font-size: 18px;
+			font-family: monospace;
+			text-align: center;
+			color: gray;
+		}
 
-	a {
-		font-size: 20px;
-		color: white;
-	}
-	
-	#git_link {
-		color: white;
-		background-color: black;
-		text-align: center;
-		font-size: 20px;
-		border-bottom-color: white;
-	}
+		#bunch_of_buttons {
+			margin: 10px 10px 10px 10px;
+			padding: 10px 10px 10px 10px;
+			align-items: center;
+			border: 1px solid black;
+			border-radius: 4px;
+		}
 
-	#git_link:hover {
-		color: white;
-		background-color: black;
-		text-align: center;
-		font-size: 22px;
-		border-bottom-color: white;
-	}
-	
-	#info {
-		background-color: skyblue;
-		color: black;
-		text-size: 25px;
-		text-align: center;
-	}
-
-	#rigel_wiki {
-		color: blue;
-		font-size: 20px;
-	}
-
-	#project_link {
-		color: white;
-		background-color: black;
-		text-align: center;
-		font-size: 20px;
-		border-bottom-color: white;
-	}
-
-</style>
-
+	</style>
 </head>
-
 <body>
 
-	<!--Profile card-->
-	<div class="card">
-	  <img src="icons/pp.png" alt="Avatar" style="width: 100%">
-	  <h1 class="name">Rigel Star</h1>
+<div id="main_card">
 
-	  <p class="title">A creator. A partner. A learner. A student</p>
-	  <p class="clz">Patan Multiple Campus</p>
-	</div>
+	<div id="main_div">
+		<h1>Hello!</h1>
+		<h3>My name is Ramesh Poudel and I've been creating something useful.</h3>
 
-	<h1>Hi, Note: I don't do much web stuff.<h1>
-	<h2>My GitHub profile link</h2>
-	<button id="git_link"><a href="https://www.github.com/rigel-star">GitHub</a></button>
-	<button id="project_link"><a href="projects.html">My Projects</a></button>
+		<br><br>
 
-	<br><br>
+		<div id="desc">
+			<h4>I'm good at Java. I love to do research a lot and currently doing research on graphics programming. I'm also good at desktop and mobile development but I suck at web stuffs.</h4>
 
-	<p>
-	<div id="info">
-		<h2>About Me</h2>
-		<h3>This is me Rigel Star and if you like to know <a id="rigel_wiki" href="https://en.wikipedia.org/wiki/Rigel"> Rigel </a>is 7th brightest star in the night sky. I love to do research. You can find many repos in my github profile like image processing 
-		algorithms, project euler solutions, graphics programming and my projects like image editors and computer 
-		vision libraries. I'm begineer in CV and CG field so stay tuned and lets work together.
-		</h3>
-	</div>
-	</p>
+			<p id="git_desc">My GitHub profile includes several projects like Image Manipulation Programs, 
+				Image Processing Library, Simple 3D and 2D graphics programs and android apps.</p>
+		</div>
+
+		<br><br>
+
+		<div id="bunch_of_buttons">
+			
+			<button id="project_btn"><a href="projects.html">Projects</a></button>
+			<button id="about_btn">About</button>
+			<button id="contact_btn">Contact</button>
+
+		</div>
+	<div>
+</div>
 
 </body>
-
-</html>	
+</html>
