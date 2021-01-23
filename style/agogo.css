@@ -145,6 +145,33 @@ img.logo {
     border: 0;
 }
 
+p.code-syntax {
+	font-style: bold;
+	color: darkred;
+	font-size: 20px;
+	font-family: inherit;
+}
+
+span.code-string {
+	color: green;
+}
+
+span.code-int {
+	font-style: bold;
+	color: red;
+}
+
+span.code-comment {
+	color: gray;
+}
+
+div.code-snippet {
+	border-style: groove;
+	border-radius: 1px;
+	border-color: gray;
+	padding: 10px;
+	text-align: left;
+}
 
 /* Content */
 div.content-wrapper {
