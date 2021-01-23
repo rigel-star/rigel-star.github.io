@@ -2,26 +2,7 @@
 <html>
 <head>
 	<title>Grayscaling the image programatically</title>
-
-	<style type="text/css">
-
-		#post {
-			font-size: 20px;
-			color: black;
-		}
-
-		#code {
-
-			background-color: rgb(255, 255, 255);
-			color: black;
-			font-size: 20px;
-			border-style: dashed;
-			align-items: center;
-			border-width: 1px;
-			font-family: monospace;
-		}
-
-	</style>
+	<link rel="stylesheet" type="text/css" href="article_renderer.css">
 
 </head>
 <body>
@@ -33,40 +14,39 @@
 
 		Let's start by simply gray scaling the image. I'm going to write code in Java but you can easily implement this code in other languages easily.
 
-		We will start by reading each image pixels in image. In Java we use <b>BufferedImage</b> to represent image object. <p>
+		We will start by reading each image pixels in image. In Java we use BufferedImage to represent image object. <br>
 
-		<div id="code">
+		<div class="code-snippet">
 			
-			BufferedImage src = null;<br>
-<br>
-			try{<br>
-				src = ImageIO.read(new File("Your file path here..."));<br>
-			} catch (IOException ex){<br>
+			<p class="code-syntax">
+			<span class="code-object">BufferedImage</span> src = null;<br><br>
+			<span class="code-keyword">try</span>{<br>
+				src = ImageIO.read(new File(<span class="code-string">"Your file path here..."</span>));<br>
+			} <span class="code-keyword">catch</span> (<span class="code-object">IOException</span> ex){<br>
 				ex.printStackTrace();<br>
-			}<br>
-<br>
-			/*ImageIO throws IOException if file not found.<br>*/
+			}<br><br></p>
+			<span class="code-comment">/*ImageIO throws IOException if file not found.<br>*/</span>
 		</div>
 
 		<br>Next step will be to iterate over every pixels in image.<p>
 
-		<div id="code">
+		<div class="code-snippet">
 			
-			int height = src.getHeight();<br>
-			int width = src.getWidth();<br>
-
+			<p class="code-syntax">
+			<span class="code-keyword">int</span> height = src.getHeight();<br>
+			<span class="code-keyword">int</span> width = src.getWidth();<br>
+			</p>
 		</div>
 
 		<br>Basic nested for loop will be used to iterate over pixels.<p>
 
-		<div id="code">
-			
-			for(int x=0; x < width; x++){<br>
-				for(int y=0; y < height; y++){<br>
-												<br>
+		<div class="code-snippet">
+			<p class="code-syntax">
+			<span class="code-keyword">for</span>(<span class="code-keyword">int</span> x = <span class="code-int"> 0 </span>; x < width; x++){<br>
+				<span class="code-keyword">for</span>(<span class="code-keyword">int</span> y= <span class="code-int"> 0 </span>; y < height; y++){<br><br>
 				}<br>
 			}<br>
-
+			</p>
 		</div>
 
 
@@ -74,37 +54,37 @@
 		Class <b>Color</b> represents the Color object in Java. <b>BufferedImage</b> has a method called <b>getRGB(x, y)</b>, which returns <b>int</b> value containing rgb color value of specific x, y pixel. We will do bitwise operation to extract each <b>R, G, B</b> value from that pixel. Otherwise you can just use <b>Color</b>'s getRed(), getGreen(), getBlue() methods to extract color without doing bitwise operations. But in the name of learning I will do bitwise.<p>
 
 
-		<div id="code">
-			
-			for(int x=0; x < width; x++){<br>
-				for(int y=0; y < height; y++){<br>
+		<div class="code-snippet">
+			<p class="code-syntax">
+			<span class="code-keyword">for</span>(<span class="code-keyword">int</span> x= 0; x < width; x++){<br>
+				<span class="code-keyword">for</span>(<span class="code-keyword">int</span> y=0; y < height; y++){<br>
 				
-					int c = src.getRGB(x, y);<br>
-					int r = c >> 16 & 255; //extracting red<br>
-					int g = c >> 8 & 255; //extracting green<br>
-					int b = c >> 0 & 255; //extracting blue<br>
+					<span class="code-keyword">int</span> c = src.getRGB(x, y);<br>
+					<span class="code-keyword">int</span> r = c >> <span class="code-int">16 & 255</span>; <span class="code-comment">//extracting red</span><br>
+					<span class="code-keyword">int</span> g = c >> <span class="code-int">8 & 255</span>; <span class="code-comment">//extracting green</span><br>
+					<span class="code-keyword">int</span> b = c >> <span class="code-int">0 & 255</span>; <span class="code-comment">//extracting blue</span><br>
 
 					<br>
-					//multiplying red with 0.2126, green with 0.7152 and blue with 0.0722 gives the gray scale value of that color.<p>
+					<span class="code-comment">//multiplying red with 0.2126, green with 0.7152 and blue with 0.0722 gives the gray scale value of that color.</span><br>
 
-					final int grayColor = (int)(0.2126 * r + 0.7152 * g + 0.0722 * b);<p>
+					<span class="code-keyword">final int</span> grayColor = (int)(0.2126 * r + 0.7152 * g + 0.0722 * b);<br>
 
-					//finally decode color using bitwise operation<p>
+					<span class="code-comment">//finally decode color using bitwise operation</span><br>
 
 					r = (grayColor << 16);<br>
 	            	g = (grayColor << 8);<br>
 	            	b = grayColor;<br>
 <br>
-	            	Color color = new Color(r+g+b, r+g+b, r+g+b);<br>
+	            	<span class="code-object">Color</span> color = new Color(r+g+b, r+g+b, r+g+b);<br>
 
 	            	<br>
-					//Finally use <b>BufferedImage</b>'s <b>setRGB</b> method to set color on specific (x, y) pixel in image.<p>
-
-					src.setRGB(x, y, color.getRGB());//x, y are from nested for loops<br>
+	            	<span class="code-comment">
+					//Finally use <b>BufferedImage</b>'s <b>setRGB</b> method to set color on specific (x, y) pixel in image.</span><br>
+					src.setRGB(x, y, color.getRGB()); <span class="code-comment">//x, y are from nested for loops</span><br>
 
 				}<br>
 			}<br>
-
+		</p>
 		</div>
 
 		<br>
