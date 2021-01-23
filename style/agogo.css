@@ -156,6 +156,16 @@ span.code-string {
 	color: green;
 }
 
+span.code-keyword {
+  color: darkblue;
+  font-style: bold;
+}
+
+span.code-object {
+  color: darkmagenta;
+  font-style: bold;
+}
+
 span.code-int {
 	font-style: bold;
 	color: red;
